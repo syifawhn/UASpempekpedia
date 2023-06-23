@@ -1,6 +1,18 @@
 package uas.syifa.uaspempekpedia;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
+
 public class Restoran {
+    @SerializedName("restoran")
+    private List<RestoranItem> restoran;
+
+    @SerializedName("success")
+    private int success;
+
+    @SerializedName("message")
+    private String message;
 
     private String id;
     private String nama_restoran;
@@ -73,5 +85,18 @@ public class Restoran {
 
     public void setLink_foto(String link_foto) {
         this.link_foto = link_foto;
+    }
+
+    public int getSuccess() {
+        return 0;
+    }
+
+    public String getMessage() {
+        return message;
+
+    }
+
+    public List<RestoranItem> getRestoran() {
+        return restoran;
     }
 }
